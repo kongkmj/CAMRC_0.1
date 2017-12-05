@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="전자공학실험4 오후 13조">
+    <meta name="author" content="김민재">
+
+    <title>전자공학실험4</title>
+
+    <!-- jQuery -->
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+
+    <!-- display size -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/test.css')}}">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+
+    <!-- MetisMenu CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='vendor/metisMenu/metisMenu.min.css')}}">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/sb-admin-2.min.css')}}">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{{url_for('static',filename='vendor/font-awesome/css/font-awesome.min.css')}}">
+
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div id="wrapper">
+
+        <!-- 페이지 상단 -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <i class="fa fa-video-camera fa-2x" style="color:black"></i>
+                  <font size="6" color="black"> CAM RC카</font>
+                </a>
+            </div>
+
+            <div class="navbar-default sidebar" role="navigation">
+            </div>
+        </nav>
+
+        <!-- 모바일 버전 링크 사이드메뉴  -->
+        <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse" id="mobile">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                          <a href="/mobile" style="color:black;">
+                              <i class="fa fa-mobile fa-2x" color="gray">
+                                <font size="4" color="gray">
+                                모바일 버전
+                              </font>
+                              </i>
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 본문 -->
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- 본문 좌측 라즈베리파이 카메라 이미지 -->
+                    <div class="col-lg-6 col-md-6">
+                        <img src="http://192.168.0.26:8081" class="img-responsive" id="test" />
+                    </div>
+                    <!-- 본문 우측 -->
+                    <div class="panel panel-default">
+                      <!-- 컨트롤러 페이지 제목 -->
+                      <div class="panel-heading">
+                        <i class="fa fa-gamepad fa-5x"><font size="7"> 컨트롤러</font></i>
+                      </div>
+                      <!-- 컨트롤러 페이지 본문 -->
+                      <div class="panel-body">
+
+                        <!-- 자동차 이동 -->
+                        <div class="col-lg-3 col-md-3 col-xs-12">
+                        <i class="fa fa-car fa-2x"><font size="5"> 자동차이동</font></i>
+                        <!-- 원 div -->
+                        <div class="circle" style="position: relative; left:0%; margin-top:20%;">
+                          <!-- 상 하 좌 우 -->
+                          <a href="#" id="foward" style="position: relative; left:95px; top: 30px;">
+                            <img src="{{url_for('static',filename='img/up.svg')}}" alt="up" width="35%" height="35%"></img>
+                          </a>
+
+                          <a href="#" id="left" style="position: relative; left:-80px; top:90px;">
+                            <img src="{{url_for('static',filename='img/left.svg')}}" alt="left" width="35%" height="35%"></img>
+                          </a>
+
+                          <a href="#" id="right" style="position: relative; left:165px; top:-15px;">
+                            <img src="{{url_for('static',filename='img/right.svg')}}" alt="right" width="35%" height="35%"></img>
+                          </a>
+
+                          <a href="#" id="back" style="position: relative; top: 50px; left:-12px;">
+                            <img src="{{url_for('static',filename='img/down.svg')}}" alt="back" width="35%" height="35%"></img>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- 자동차 이동 끝 -->
+
+                      <!-- 카메라 이동 -->
+                      <div class="col-lg-3 col-md-3 col-xs-12">
+                        <i class="fa fa-camera fa-2x"><font size="5"> 카메라이동</font></i>
+                        <div>
+                          <!-- 원 div -->
+                          <div class="circle" style="position: relative; left:0%; margin-top:20%;">
+
+                          <!-- 상 하 -->
+                          <a href="#" id="up" style="position: relative; left:32%; top:30px;">
+                            <img src="{{url_for('static',filename='img/up.svg')}}" alt="up" width="35%" height="35%"></img>
+                          </a>
+                          <a href="#" id="down" style="position: relative; top:150px; left:-5%;">
+                            <img src="{{url_for('static',filename='img/down.svg')}}" alt="down" width="35%" height="35%"></img>
+                          </a>
+
+                        </div>
+                        <!-- 원 div 끝 -->
+                        </div>
+                      </div>
+                      <!-- 카메라 이동 끝 -->
+                      </div>
+                      <!-- 컨트롤러 페이지 본문 끝 -->
+                    </div>
+                    <!-- 본문 우측 끝 -->
+                </div>
+            </div>
+            <!-- 본문 끝 -->
+    </div>
+    <!-- wrapper 끝 -->
+    <script>
+
+    // 버튼 이벤트
+    // 후진, 전진, 자회전, 우회전
+    $( document ).ready(function(){
+      $("#back").on("mousedown", function() {
+        $.get('/back_side');
+      }).on('mouseup', function() {
+        $.get('/stop');
+      });
+      $("#foward").on("mousedown", function() {
+        $.get('/foward_side');
+      }).on('mouseup', function() {
+        $.get('/stop');
+      });
+      $("#left").on("mousedown", function() {
+        $.get('/left_side');
+      }).on('mouseup', function() {
+        $.get('/stop');
+      });
+      $("#right").on("mousedown", function() {
+        $.get('/right_side');
+      }).on('mouseup', function() {
+        $.get('/stop');
+      });
+
+      //카메라 상하
+      $("#up").on("mousedown", function() {
+        $.get('/up');
+      }).on('mouseup', function() {
+        $.get('/camStop');
+      });
+
+      $("#down").on("mousedown", function() {
+        $.get('/down');
+      }).on('mouseup', function() {
+        $.get('/camStop');
+      });
+  });
+
+    </script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{{url_for('static',filename='vendor/metisMenu/metisMenu.min.js')}}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{url_for('static',filename='js/sb-admin-2.min.js')}}"></script>
+
+  </body>
+
+</html>
