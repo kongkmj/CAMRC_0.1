@@ -76,21 +76,21 @@ def stop():
    return  'true'
 
 @app.route('/up')
-def down_side():
+def up():
    data1="UP"
    GPIO.output(downPin,0)
    GPIO.output(upPin,1)
    return 'true'
 
 @app.route('/down')
-def down_side():
+def down():
    data1="DOWN"
    GPIO.output(upPin,0)
    GPIO.output(downPin,1)
    return 'true'
 
 @app.route('/camStop')
-def down_side():
+def cam_stop():
    data1="CAMSTOP"
    GPIO.output(upPin,0)
    GPIO.output(downPin,0)
