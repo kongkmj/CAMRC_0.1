@@ -11,7 +11,7 @@ Web으로 조종하는 CAM RC카
 2) 아두이노 키트
 3) 보조배터리
 
-![연결구도](./readme_img/1)
+![연결구도](./readme_img/1.png)
 ![회로도](./readme_img/2)
 
 ```
