@@ -22,32 +22,32 @@ Web으로 조종하는 CAM RC카
 
 라즈베리파이 업데이트 & 업그레이드
 ```
-sudo apt-get update & upgrade
+$ sudo apt-get update & upgrade
 ```
 카메라 라이브러리 설치
 ```
-sudo apt-get install motion
+$ sudo apt-get install motion
 ```
 
-파이썬 패키지 설치
+파이썬 패키지매니저 설치
 ```
-sudo apt-get install python-pip
+$ sudo apt-get install python-pip
 ```
 
 플라스크 설치
 ```
-sudo pip install flask
+$ sudo pip install flask
 ```
 ### motion 설정 변경
 
 ```
-sudo vi /etc/default/motion
+$ sudo vi /etc/default/motion
 ```
 
 1) start_motion_daemon = yes 로설정
 
 ```
-sudo vi /etc/motion/motion.conf
+$ sudo vi /etc/motion/motion.conf
 ```
 
 #### 필수설정
@@ -60,7 +60,7 @@ sudo vi /etc/motion/motion.conf
 3) framerate 1000 (높은수치 설정) => frame설정을 30이상 올려도 비슷하다 그냥 1000으로 하였다.
 4) webcam_port 8081 (기본)  =>webcam의 화면을 띄워줄 포트 번호
 
-
+<hr/>
 ## 테스트 실행하기
 
 이 시스템을 위한 자동화된 테스트를 실행하는 방법을 적어주세요.
