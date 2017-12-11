@@ -39,13 +39,14 @@ $ sudo apt-get install python-pip
 $ sudo pip install flask
 ```
 ### motion 설정 변경
-
+<hr/>
 ```
 $ sudo vi /etc/default/motion
 ```
 
 1) start_motion_daemon = yes 로설정
 
+<hr/>
 ```
 $ sudo vi /etc/motion/motion.conf
 ```
