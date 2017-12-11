@@ -38,13 +38,28 @@ sudo apt-get install python-pip
 ```
 sudo pip install flask
 ```
-반복하세요
+### motion 설정 변경
 
 ```
-끝날때까지 적어주세요
+sudo vi /etc/default/motion
 ```
 
-마무리로 시스템에서 데이터를 추출하는 방법이나 데모를 실행하는 방법을 설명해 주세요.
+1) start_motion_daemon = yes 로설정
+
+```
+sudo vi /etc/motion/motion.conf
+```
+
+#### 필수설정
+1) daemon = off 에서 on으로 설정 => 백그라운드에서 돌리기
+2) webcam_localhost = on 에서 off 로 설정 => 외부에서 접속할수 있도록 설정
+
+#### 카메라옵션
+1) width 640(추천) 자신이 원하는 크기로 너무크면 영상의 속도가 느려진다.
+2) height 480(추천) 자신이 원하는 크기로 너무크면 영상의 속도가 느려진다.
+3) framerate 1000(높은수치 설정)  frame설정을 30이상 올려도 비슷하다 그냥 1000으로 하였다.
+4) webcam_port 8081(기본) webcam의 화면을 띄워줄 포트 번호
+
 
 ## 테스트 실행하기
 
