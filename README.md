@@ -16,11 +16,9 @@ Web으로 조종하는 CAM RC카
 
 ### 설치하기
 
-1. sudo apt-get update & upgrade
-2. sudo apt-get install motion
-3. sudo apt-get install python-pip
-4. sudo pip install flask
-4. sudo vi /etc/motion/motion.conf
+1. motion
+2. python-pip
+3. flask
 
 ```
 sudo apt-get update & upgrade
