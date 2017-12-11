@@ -12,7 +12,7 @@ Web으로 조종하는 CAM RC카
 3) 보조배터리
 
 ![연결구도](./readme_img/1.png)
-![회로도](./readme_img/2,png)
+![회로도](./readme_img/2.png)
 
 
 ### 설치하기
@@ -82,7 +82,7 @@ $ sudo python app.py
 ```
 
 
-![회로도](./readme_img/3,png)
+![웹 화면](./readme_img/3.png)
 
 
 ---
