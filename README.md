@@ -20,18 +20,21 @@ Web으로 조종하는 CAM RC카
 2. python-pip
 3. flask
 
+라즈베리파이 업데이트 & 업그레이드
 ```
 sudo apt-get update & upgrade
 ```
-
+카메라 라이브러리 설치
 ```
 sudo apt-get install motion
 ```
 
+파이썬 패키지 설치
 ```
 sudo apt-get install python-pip
 ```
 
+플라스크 설치
 ```
 sudo pip install flask
 ```
